@@ -6,7 +6,6 @@ from allboards import *
 
 boardone = random.choice(boardsList)
 
-
 #Printing board
 def printboard(board):
     colCounter = 3
@@ -33,8 +32,6 @@ def printboard(board):
 #Change value of a position 
 def changenumber(board, row, col, newnumber):
     board[row][col] = newnumber
-
-    
 
 printboard(boardone)
 
@@ -161,14 +158,6 @@ def solve(boardones, x=0, y=0):
                         return True
                 changenumber(boardones, x, y, 0)
 
-
-
-
-
-
-
-
-
 pygame.init()
 
 BLACK = (0, 0, 0)
@@ -177,11 +166,6 @@ BLACK = (0, 0, 0)
 screen = pygame.display.set_mode([453, 435])
 pygame.display.set_caption('Sudoku')
 board = pygame.image.load("sudoku-blankgrid.png")
-
-
-
-
-
 
 running = True
 while running:
@@ -222,6 +206,5 @@ while running:
                 x += 50
             y += 46
             x = 20
-
 
     pygame.display.flip()
